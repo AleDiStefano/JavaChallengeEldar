@@ -289,7 +289,9 @@ public class JavaChallenge_Ej1 {
         System.out.println("Las tasas para la fecha " + consult.toString() + " son las siguientes:");
         int year = consult.getYear();
         int month = consult.getMonthValue();
-        System.out.println("VISA: " +  year / month);
+        int lastTwoDigitsOfYear = year % 100;
+        
+        System.out.println("VISA: " +  lastTwoDigitsOfYear  / month);
         System.out.println("NARA: " + consult.getDayOfMonth() * 0.5);
         System.out.println("AMEX: " + consult.getMonthValue() * 0.1);
     }
