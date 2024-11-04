@@ -2,6 +2,7 @@ package com.Eldar.JavaChallenge_Ej2.controller;
 
 import com.Eldar.JavaChallenge_Ej2.dto.OperationDTO;
 import com.Eldar.JavaChallenge_Ej2.model.CreditCard;
+import com.Eldar.JavaChallenge_Ej2.model.CreditCardType;
 import com.Eldar.JavaChallenge_Ej2.model.Operation;
 import com.Eldar.JavaChallenge_Ej2.repository.ICreditCardRepository;
 import com.Eldar.JavaChallenge_Ej2.service.IOperationService;
@@ -24,6 +25,12 @@ public class OperationController {
     @GetMapping("/operation/get")
     public List<Operation> operationGet(){
         return repo.getAllOperation();
+    }
+
+    @GetMapping("/operation/getRate/{creditCardType}/{amount}")
+    public String operationGetRate(@PathVariable CreditCardType creditCardType,
+                                   @PathVariable double amount){
+        return repo.getRate(creditCardType, amount);
     }
 
     @PostMapping("/operation/create")
