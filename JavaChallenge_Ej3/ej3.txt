@@ -1,0 +1,4 @@
+Para la resolución del problema se me ocurrió buscar algún patrón de diseño que aplique la programación reactiva, que solamente haga determinadas acciones cuando se haya producido un cambio en alguna variable de control.
+Para este caso encontré que el patrón de diseño indicado es Observer, que notificaría algún cambio en la camara enviando una nueva señal al monitor.
+
+fuente: https://refactoring.guru/es/design-patterns/observer/java/example
